@@ -14,8 +14,6 @@ const webTitle = '桃飽ハーレム - Taobao • Harem'
 const port = process.env.port || process.env.npm_config_port || 9527
 
 module.exports = {
-  // publicPath: '/',
-  // 部署到 Github Pages
   publicPath: process.env.NODE_ENV === 'production' ? '/' + repo + '/' : '/',
   outputDir: 'dist',
   assetsDir: 'static',

@@ -13,9 +13,9 @@
   <script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js"></script>
   <% if (process.env.NODE_ENV == 'production') { %>
   <script>
-    if(window.location.pathname != '/404') {
+    if(window.location.pathname != '<%= process.env.BASE_URL %>' + '404') {
       var element = new Image();
-      Object.defineProperty(element, 'id', { get: function () { window.location.href = "/404" } });
+      Object.defineProperty(element, 'id', { get: function () { window.location.href = '<%= process.env.BASE_URL %>' + "404" } });
       console.log(element);
     }
   </script>
@@ -25,7 +25,7 @@
 
 <body>
   <noscript>
-    <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
   </noscript>
   <div id="app"></div>
   <!-- built files will be auto injected -->
