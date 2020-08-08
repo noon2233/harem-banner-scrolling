@@ -1,0 +1,31 @@
+@media screen and (max-width: 860px) {
+    #header {
+        h1 {
+            font-size: 2em !important;
+        }
+
+        p {
+            font-size: 1em !important;
+        }
+
+        li {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    #footer {
+        font-size: 0.65em !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #header {
+        li {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+}

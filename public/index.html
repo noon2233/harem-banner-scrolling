@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="这里是桃饱の后宫哒,ここは桃饱ハーレムだよ">
+  <meta name="author" content="fz6m">
+  <meta name="keyword" content="桃饱,后宫,桃饱の店,桃饱の后宫">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js"></script>
+  <% if (process.env.NODE_ENV == 'production') { %>
+  <script>
+    if(window.location.pathname != '/404') {
+      var element = new Image();
+      Object.defineProperty(element, 'id', { get: function () { window.location.href = "/404" } });
+      console.log(element);
+    }
+  </script>
+  <% } %>
+
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
