@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" class="ripple">
+  <a :href="link" class="ripple" @click.prevent="push">
     <svg-icon :icon-class="icon" />
   </a>
 </template>
@@ -14,6 +14,13 @@ export default {
     icon: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    push(e) {
+      setTimeout(() => {
+        this.link !== 'javascript:void(0);' ? window.open(this.link) : null
+      }, 500)
     }
   }
 }
