@@ -7,6 +7,9 @@
       <div id="nav">
         <ul>
           <li>
+            <Button class="wordpress" icon="wordpress" :link="links.wordpress" />
+          </li>
+          <li>
             <Button icon="telegram" :link="links.telegram" />
           </li>
           <li>
@@ -106,6 +109,7 @@ export default {
   top: -1em;
   vertical-align: middle;
   width: 90%;
+  user-select: none;
 
   h1 {
     font-size: 3.8em;
@@ -135,6 +139,10 @@ export default {
         top: 0;
         margin: 0 1em;
     }
+
+    .wordpress {
+      color: #ee9ca7;
+    }
   }
 }
 
@@ -155,6 +163,7 @@ export default {
   font-family: sans-serif;
   font-weight: initial;
   font-size: 0.8em;
+  user-select: none;
 
   a {
     text-decoration: none;
@@ -164,6 +173,7 @@ export default {
       color: $color;
     }
   }
+
 }
 </style>
 

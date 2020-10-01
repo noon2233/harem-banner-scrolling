@@ -5,16 +5,12 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-// const name = 'banner-scrolling'
-
-const repo = 'harem-banner-scrolling'
-
 const webTitle = '桃飽ハーレム - Taobao • Harem'
 
 const port = process.env.port || process.env.npm_config_port || 9527
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/' + repo + '/' : '/',
+  publicPath: process.env.NODE_ENV === 'development' ? '/' : process.env.VUE_APP_PATH,
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
@@ -36,7 +32,6 @@ module.exports = {
     }
   },
   configureWebpack: {
-    // name: name,
     resolve: {
       alias: {
         '@': resolve('src'),

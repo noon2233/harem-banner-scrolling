@@ -27,6 +27,7 @@ export default {
         link: 'https://fz6m.com'
       },
       links: {
+        wordpress: 'https://fz6m.com',
         telegram: 'https://t.me/hajimeyuki',
         csdn: 'https://blog.csdn.net/qq_21567385',
         netease: 'https://music.163.com/m/user/home?id=291516471',
