@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" class="ripple" @click.prevent="push">
+  <a ref="el" :href="link" class="ripple" :style="cssVar" @click.prevent="push">
     <svg-icon :icon-class="icon" />
   </a>
 </template>
@@ -16,11 +16,31 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      clickX: '20px',
+      clickY: '20px'
+    }
+  },
+  computed: {
+    cssVar() {
+      return {
+        '--click-x': this.clickX,
+        '--click-y': this.clickY
+      }
+    }
+  },
   methods: {
     push(e) {
+      // set click position
+      const { left, top } = this.$refs.el.getBoundingClientRect()
+      this.clickX = `${e.clientX - left}px`
+      this.clickY = `${e.clientY - top}px`
+
+      // go
       setTimeout(() => {
         this.link !== 'javascript:void(0);' ? window.open(this.link) : null
-      }, 500)
+      }, 800)
     }
   }
 }
@@ -51,19 +71,19 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
+    top: var(--click-y, 0);
+    left: var(--click-x, 0);
     pointer-events: none;
-    background-image: radial-gradient(circle, #{$color} 10%, transparent 10.01%);
+    background-image: radial-gradient(circle, #{$color-deep} 10%, transparent 10.01%);
     background-repeat: no-repeat;
     background-position: 50%;
-    transform: scale(10, 10);
+    transform: translate(-50%, -50%) scale(10);
     opacity: 0;
     transition: transform .3s, opacity .5s;
 }
 
 .ripple:active:after {
-    transform: scale(0, 0);
+    transform: translate(-50%, -50%) scale(0);
     opacity: .3;
     transition: 0s;
 }
