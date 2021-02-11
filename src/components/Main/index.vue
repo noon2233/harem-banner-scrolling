@@ -5,26 +5,12 @@
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
       <div id="nav">
-        <ul>
-          <li>
-            <Button class="wordpress" icon="wordpress" :link="links.wordpress" />
-          </li>
-          <li>
-            <Button icon="telegram" :link="links.telegram" />
-          </li>
-          <li>
-            <Button icon="csdn" :link="links.csdn" />
-          </li>
-          <li>
-            <Button icon="netease" :link="links.netease" />
-          </li>
-          <li>
-            <Button icon="github" :link="links.github" />
-          </li>
-          <li>
-            <Button icon="email" :link="links.email" />
-          </li>
-        </ul>
+        <Button class="u-pink" icon="wordpress" :link="links.wordpress" />
+        <Button icon="telegram" :link="links.telegram" />
+        <Button icon="csdn" :link="links.csdn" />
+        <Button icon="netease" :link="links.netease" />
+        <Button icon="github" :link="links.github" />
+        <Button icon="email" :link="links.email" />
       </div>
     </div>
 
@@ -100,15 +86,13 @@ export default {
 
   animation: header 1s .5s forwards;
   backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
   cursor: default;
   display: inline-block;
   opacity: 0;
   position: relative;
   text-align: center;
-  top: -1em;
+  top: -1.4em;
   vertical-align: middle;
-  width: 90%;
   user-select: none;
 
   h1 {
@@ -126,23 +110,15 @@ export default {
 
   #nav {
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      margin: 0 20px;
     }
 
-    li {
-        backface-visibility: hidden;
-        transform: translate3d(0, 0, 0);
-        display: inline-block;
-        position: relative;
-        top: 0;
-        margin: 0 1em;
-    }
-
-    .wordpress {
-      color: #ee9ca7;
-    }
   }
 }
 
@@ -177,3 +153,10 @@ export default {
 }
 </style>
 
+<style>
+
+.u-pink {
+  color: #ee9ca7;
+}
+
+</style>
