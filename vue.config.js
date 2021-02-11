@@ -1,6 +1,8 @@
 'use strict'
 const path = require('path')
 
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
@@ -16,7 +18,7 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
   devServer: {
-    host: '127.0.0.1',
+    host: 'localhost',
     port: port,
     open: true,
     overlay: {
@@ -39,7 +41,10 @@ module.exports = {
         '@c': resolve('src/components'),
         '@v': resolve('src/views')
       }
-    }
+    },
+    plugins: [
+      // new BundleAnalyzerPlugin()
+    ]
   },
   chainWebpack(config) {
     config.plugin('html').tap(options => {
