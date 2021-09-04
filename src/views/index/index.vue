@@ -19,20 +19,20 @@ export default {
   // 统一管理数据
   data() {
     return {
-      title: '桃飽ハーレム',
-      description: 'Taobao • Harem',
+      title: 'NASN 导航',
+      description: '& 发卡',
       footer: {
-        copyright: 'Copyright © by ',
-        text: 'fz6m',
-        link: 'https://fz6m.com'
+        copyright: 'NASN 导航 & 发卡 © by ',
+        text: 'nasn.me',
+        link: 'https://nasn.me'
       },
       links: {
-        wordpress: 'https://fz6m.com',
-        telegram: 'https://t.me/hajimeyuki',
-        csdn: 'https://blog.csdn.net/qq_21567385',
-        netease: 'https://music.163.com/m/user/home?id=291516471',
-        github: 'https://github.com/fz6m',
-        email: 'mailto:fz6meng@gmail.com'
+        wordpress: 'https://nasn.me',
+        telegram: 'https://t.me/nasnme_admin',
+        // csdn: 'https://blog.csdn.net/qq_21567385',
+        // netease: 'https://music.163.com/m/user/home?id=291516471',
+        // github: 'https://github.com/fz6m',
+        // email: 'mailto:fz6meng@gmail.com'
       }
     }
   },
