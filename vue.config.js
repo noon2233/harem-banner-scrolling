@@ -7,7 +7,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const webTitle = '桃飽ハーレム - Taobao • Harem'
+const webTitle = 'NASN 导航 & 发卡'
 
 const port = process.env.port || process.env.npm_config_port || 9527
 
