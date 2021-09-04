@@ -8,7 +8,7 @@ const routes = [
     path: '/',
     component: () => import('@v/index'),
     meta: {
-      title: '桃飽ハーレム - Taobao • Harem'
+      title: 'NASN 导航 & 发卡'
     }
   },
   {
